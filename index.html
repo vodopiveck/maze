@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minotaur's Maze</title>
+    <title>Document</title>
+</head>
+<body>
+    <div id="imageDiv">
+        <!--<img src="images/maze.png">-->
+        <h1> Maze</h1>
+    </div>
+    <div id="mazeDiv">
+        <canvas id="maze"></canvas>
+    </div>
+</body>
+<style>
+    #imageDiv h1{
+        text-align: center;
+        color: black;
+    }
+    #mazeDiv{
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        margin: auto;
+    }
+    #maze{
+        height: 400px;
+        width: 400px;
+    }
+</style>
+<script>
+let maze = [
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+];
+const start = Math.floor(Math.random() * 5);
+const end =Math.floor(Math.random() * 5);
+maze[0][start]=2;
+maze[4][end]=3;
+console.log(maze);
+
+</script>
+</html>
